@@ -10,9 +10,9 @@ The **source code** is available on [GitHub](https://github.com/claudiob/yt-url)
 [![Dependency Status](http://img.shields.io/gemnasium/claudiob/yt-url.svg)](https://gemnasium.com/claudiob/yt-url)
 [![Code Climate](http://img.shields.io/codeclimate/github/claudiob/yt-url.svg)](https://codeclimate.com/github/claudiob/yt-url)
 [![Online docs](http://img.shields.io/badge/docs-✓-green.svg)](http://www.rubydoc.info/gems/yt-url/frames)
-[![Gem Version](http://img.shields.io/gem/v/yt.svg)](http://rubygems.org/gems/yt-url)
+[![Gem Version](http://img.shields.io/gem/v/yt-url.svg)](http://rubygems.org/gems/yt-url)
 
-After [registering your app](#configuring-your-app), you can run commands like:
+After [registering your app](https://claudiob.github.io/yt), you can run commands like:
 
 ```ruby
 url = Yt::URL.new "youtu.be/gknzFj_0vvY"
