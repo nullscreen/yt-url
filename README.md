@@ -9,7 +9,7 @@ The **source code** is available on [GitHub](https://github.com/claudiob/yt-url)
 [![Coverage Status](http://img.shields.io/coveralls/claudiob/yt-url/master.svg)](https://coveralls.io/r/claudiob/yt-url)
 [![Dependency Status](http://img.shields.io/gemnasium/claudiob/yt-url.svg)](https://gemnasium.com/claudiob/yt-url)
 [![Code Climate](http://img.shields.io/codeclimate/github/claudiob/yt-url.svg)](https://codeclimate.com/github/claudiob/yt-url)
-[![Online docs](http://img.shields.io/badge/docs-✓-green.svg)](http://www.rubydoc.info/gems/yt-ur;/frames)
+[![Online docs](http://img.shields.io/badge/docs-✓-green.svg)](http://www.rubydoc.info/gems/yt-url/frames)
 [![Gem Version](http://img.shields.io/gem/v/yt.svg)](http://rubygems.org/gems/yt-url)
 
 After [registering your app](#configuring-your-app), you can run commands like:
