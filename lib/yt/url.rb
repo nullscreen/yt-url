@@ -44,7 +44,7 @@ module Yt
       @resource ||= case kind
         when :channel then Yt::Channel
         when :video then Yt::Video
-        # when :playlist then Yt::Playlist # TODO
+        when :playlist then Yt::Playlist
         else raise Yt::Errors::NoItems
       end.new options.merge(id: id)
     end

@@ -6,7 +6,12 @@ RSpec.configure do |config|
   end
 
   $existing_channel_id   = 'UCxO1tY8h1AhOz0T4ENwmpow'
+
   $existing_video_id     = 'gknzFj_0vvY'
   $unknown_video_id      = 'invalid-id-'
+
+  $existing_playlist_id  = 'PL-LeTutc9GRKD3yBDhnRF_yE8UTaQI5Jf'
+  $unknown_playlist_id   = 'invalid-id-'
+
   $unknown_text          = 'not-really-anything---'
 end
