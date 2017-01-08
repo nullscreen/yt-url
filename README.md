@@ -18,7 +18,6 @@ After [registering your app](https://claudiob.github.io/yt), you can run command
 url = Yt::URL.new "youtu.be/gknzFj_0vvY"
 url.kind # => :video
 url.id # => "gknzFj_0vvY"
-url.canonical # => "https://www.youtube.com/watch?v=gknzFj_0vvY"
 url.resource # => #<Yt::Video @id=gknzFj_0vvY>
 ```
 
