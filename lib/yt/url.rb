@@ -8,7 +8,6 @@ module Yt
   # @example Identify a YouTube video from its short URL:
   #   url = Yt::URL.new 'youtu.be/kawaiiguy'
   #   url.id # => 'UC4lU5YG9QDgs0X2jdnt7cdQ'
-  #   url.canonical # => 'https://www.youtube.com/channel/UC4lU5YG9QDgs0X2jdnt7cdQ'
   #   url.resource # => #<Yt::Channel @id=UC4lU5YG9QDgs0X2jdnt7cdQ>
   class URL
     # @param [String] text the name or URL of a YouTube resource (in any form).
@@ -30,21 +29,12 @@ module Yt
       @match[:id] ||= fetch_id
     end
 
-    # @return [String] the canonical URL form of the YouTube resource.
-    def canonical
-      case kind
-        when :channel then "https://www.youtube.com/channel/#{id}"
-        when :video then "https://www.youtube.com/watch?v=#{id}"
-        when :playlist then "https://www.youtube.com/playlist?list=#{id}"
-      end
-    end
-
     # @return [<Yt::Channel>] the resource associated with the URL
     def resource(options = {})
       @resource ||= case kind
         when :channel then Yt::Channel
         when :video then Yt::Video
-        # when :playlist then Yt::Playlist # TODO
+        when :playlist then Yt::Playlist
         else raise Yt::Errors::NoItems
       end.new options.merge(id: id)
     end
