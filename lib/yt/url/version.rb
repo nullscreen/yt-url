@@ -2,6 +2,6 @@ module Yt
   class URL
     # @return [String] the SemVer-compatible gem version.
     # @see http://semver.org
-    VERSION = "0.0.0"
+    VERSION = "1.0.0.beta1"
   end
 end
