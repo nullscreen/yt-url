@@ -12,7 +12,7 @@ The **source code** is available on [GitHub](https://github.com/fullscreen/yt-ur
 [![Online docs](http://img.shields.io/badge/docs-✓-green.svg)](http://www.rubydoc.info/gems/yt-url/frames)
 [![Gem Version](http://img.shields.io/gem/v/yt-url.svg)](http://rubygems.org/gems/yt-url)
 
-After [registering your app](https://fullscreen.github.io/yt), you can run commands like:
+After [registering your app](https://fullscreen.github.io/yt-core/), you can run commands like:
 
 ```ruby
 url = Yt::URL.new "youtu.be/gknzFj_0vvY"
@@ -27,11 +27,11 @@ The **full documentation** is available at [rubydoc.info](http://www.rubydoc.inf
 A comprehensive guide to Yt
 ===========================
 
-All the classes and methods available are detailed on the [Yt homepage](https://fullscreen.github.io/yt/):
+All the classes and methods available are detailed on the [Yt homepage](https://fullscreen.github.io/yt-core/):
 
-[![Yt homepage](https://cloud.githubusercontent.com/assets/10076/19788369/b61d7756-9c5c-11e6-8bd8-05f8d67aef4e.png)](https://fullscreen.github.io/yt/)
+[![Yt homepage](https://cloud.githubusercontent.com/assets/10076/19788369/b61d7756-9c5c-11e6-8bd8-05f8d67aef4e.png)](https://fullscreen.github.io/yt-core/)
 
-Please proceed to [https://fullscreen.github.io/yt/urls.html](https://fullscreen.github.io/yt/urls.html) for more details and examples.
+Please proceed to [https://fullscreen.github.io/yt-core/urls.html](https://fullscreen.github.io/yt-core/urls.html) for more details and examples.
 
 
 How to install
