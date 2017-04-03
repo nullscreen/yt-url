@@ -32,7 +32,7 @@ describe 'Yt::URL#id' do
 
     describe 'fails with unknown channels' do
       let(:name) { 'not-an-actual-channel' }
-      it {expect{url.id}.to raise_error Yt::Errors::NoItems }
+      it {expect{url.id}.to raise_error Yt::NoItemsError }
     end
   end
 
@@ -46,7 +46,7 @@ describe 'Yt::URL#id' do
 
     describe 'fails with unknown channels' do
       let(:name) { 'not-an-actual-channel' }
-      it {expect{url.id}.to raise_error Yt::Errors::NoItems }
+      it {expect{url.id}.to raise_error Yt::NoItemsError }
     end
   end
 
@@ -60,7 +60,7 @@ describe 'Yt::URL#id' do
 
     describe 'fails with unknown channels' do
       let(:name) { 'not-an-actual-channel' }
-      it {expect{url.id}.to raise_error Yt::Errors::NoItems }
+      it {expect{url.id}.to raise_error Yt::NoItemsError }
     end
   end
 

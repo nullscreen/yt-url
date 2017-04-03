@@ -1,4 +1,4 @@
-require 'yt'
+require 'yt/core'
 
 # An object-oriented Ruby client for YouTube.
 # @see http://www.rubydoc.info/gems/yt/
@@ -26,7 +26,7 @@ module Yt
 
     # @return [<String, nil>] the ID of the YouTube resource matching the URL.
     def id
-      @match[:id] ||= fetch_id
+      @match['id'] ||= fetch_id
     end
 
     # @return [<Yt::Channel>] the resource associated with the URL
@@ -35,7 +35,7 @@ module Yt
         when :channel then Yt::Channel
         when :video then Yt::Video
         when :playlist then Yt::Playlist
-        else raise Yt::Errors::NoItems
+        else raise Yt::NoItemsError
       end.new options.merge(id: id)
     end
 
@@ -66,8 +66,7 @@ module Yt
       patterns.find(-> {{kind: :unknown}}) do |kind, regex|
         if data = @text.match(regex)
           # Note: With Ruby 2.4, the following is data.named_captures
-          match = data.names.zip(data.captures).to_h.with_indifferent_access
-          break match.merge kind: kind
+          break data.names.zip(data.captures).to_h.merge kind: kind
         end
       end
     end
@@ -84,7 +83,7 @@ module Yt
 
     def fetch_id
       response = Net::HTTP.start 'www.youtube.com', 443, use_ssl: true do |http|
-        http.request Net::HTTP::Get.new("/#{@match[:format]}#{@match[:name]}")
+        http.request Net::HTTP::Get.new("/#{@match['format']}#{@match['name']}")
       end
       if response.is_a?(Net::HTTPRedirection)
         response = Net::HTTP.start 'www.youtube.com', 443, use_ssl: true do |http|
@@ -95,7 +94,7 @@ module Yt
       if data = response.body.match(regex)
         data[:id]
       else
-        raise Yt::Errors::NoItems
+        raise Yt::NoItemsError
       end
     end
   end

@@ -3,16 +3,16 @@ Yt::URL - a URL extension for the Yt library
 
 Yt::URL helps you identify YouTube resources from their URL.
 
-The **source code** is available on [GitHub](https://github.com/claudiob/yt-url) and the **documentation** on [RubyDoc](http://www.rubydoc.info/gems/yt-url/frames).
+The **source code** is available on [GitHub](https://github.com/fullscreen/yt-url) and the **documentation** on [RubyDoc](http://www.rubydoc.info/gems/yt-url/frames).
 
-[![Build Status](http://img.shields.io/travis/claudiob/yt-url/master.svg)](https://travis-ci.org/claudiob/yt-url)
-[![Coverage Status](http://img.shields.io/coveralls/claudiob/yt-url/master.svg)](https://coveralls.io/r/claudiob/yt-url)
-[![Dependency Status](http://img.shields.io/gemnasium/claudiob/yt-url.svg)](https://gemnasium.com/claudiob/yt-url)
-[![Code Climate](http://img.shields.io/codeclimate/github/claudiob/yt-url.svg)](https://codeclimate.com/github/claudiob/yt-url)
+[![Build Status](http://img.shields.io/travis/Fullscreen/yt-url/master.svg)](https://travis-ci.org/Fullscreen/yt-url)
+[![Coverage Status](http://img.shields.io/coveralls/Fullscreen/yt-url/master.svg)](https://coveralls.io/r/Fullscreen/yt-url)
+[![Dependency Status](http://img.shields.io/gemnasium/Fullscreen/yt-url.svg)](https://gemnasium.com/Fullscreen/yt-url)
+[![Code Climate](http://img.shields.io/codeclimate/github/Fullscreen/yt-url.svg)](https://codeclimate.com/github/Fullscreen/yt-url)
 [![Online docs](http://img.shields.io/badge/docs-✓-green.svg)](http://www.rubydoc.info/gems/yt-url/frames)
 [![Gem Version](http://img.shields.io/gem/v/yt-url.svg)](http://rubygems.org/gems/yt-url)
 
-After [registering your app](https://claudiob.github.io/yt), you can run commands like:
+After [registering your app](https://fullscreen.github.io/yt), you can run commands like:
 
 ```ruby
 url = Yt::URL.new "youtu.be/gknzFj_0vvY"
@@ -27,11 +27,11 @@ The **full documentation** is available at [rubydoc.info](http://www.rubydoc.inf
 A comprehensive guide to Yt
 ===========================
 
-All the classes and methods available are detailed on the [Yt homepage](https://claudiob.github.io/yt/):
+All the classes and methods available are detailed on the [Yt homepage](https://fullscreen.github.io/yt/):
 
-[![Yt homepage](https://cloud.githubusercontent.com/assets/10076/19788369/b61d7756-9c5c-11e6-8bd8-05f8d67aef4e.png)](https://claudiob.github.io/yt/)
+[![Yt homepage](https://cloud.githubusercontent.com/assets/10076/19788369/b61d7756-9c5c-11e6-8bd8-05f8d67aef4e.png)](https://fullscreen.github.io/yt/)
 
-Please proceed to [https://claudiob.github.io/yt/urls.html](https://claudiob.github.io/yt/urls.html) for more details and examples.
+Please proceed to [https://fullscreen.github.io/yt/urls.html](https://fullscreen.github.io/yt/urls.html) for more details and examples.
 
 
 How to install
@@ -43,7 +43,7 @@ To install on your system, run
 
 To use inside a bundled Ruby project, add this line to the Gemfile:
 
-    gem 'yt-url', '~> 0.0.0'
+    gem 'yt-url', '~> 1.0.0.beta2'
 
 Since the gem follows [Semantic Versioning](http://semver.org),
 indicating the full version in your Gemfile (~> *major*.*minor*.*patch*)
@@ -75,7 +75,7 @@ How to release new versions
 If you are a manager of this project, remember to upgrade the [Yt gem](http://rubygems.org/gems/yt-url)
 whenever a new feature is added or a bug gets fixed.
 
-Make sure all the tests are passing on [Travis CI](https://travis-ci.org/claudiob/yt-url),
+Make sure all the tests are passing on [Travis CI](https://travis-ci.org/fullscreen/yt-url),
 document the changes in HISTORY.md and README.md, bump the version, then run
 
     rake release
