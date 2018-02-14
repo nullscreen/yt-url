@@ -41,21 +41,21 @@ module Yt
 
     # @return [Array<Regexp>] patterns matching URLs of YouTube playlists.
     PLAYLIST_PATTERNS = [
-       %r{^(?:https?://)?(?:www\.)?youtube\.com/playlist/?\?list=(?<id>[a-zA-Z0-9_-]+)},
+       %r{\A(?:https?://)?(?:www\.)?youtube\.com/playlist/?\?list=(?<id>[a-zA-Z0-9_-]+)},
     ]
 
     # @return [Array<Regexp>] patterns matching URLs of YouTube videos.
     VIDEO_PATTERNS = [
-      %r{^(?:https?://)?(?:www\.)?youtube\.com/watch\?v=(?<id>[a-zA-Z0-9_-]{11})},
-      %r{^(?:https?://)?(?:www\.)?youtu\.be/(?<id>[a-zA-Z0-9_-]{11})},
-      %r{^(?:https?://)?(?:www\.)?youtube\.com/embed/(?<id>[a-zA-Z0-9_-]{11})},
-      %r{^(?:https?://)?(?:www\.)?youtube\.com/v/(?<id>[a-zA-Z0-9_-]{11})},
+      %r{\A(?:https?://)?(?:www\.)?youtube\.com/watch\?v=(?<id>[a-zA-Z0-9_-]{11})},
+      %r{\A(?:https?://)?(?:www\.)?youtu\.be/(?<id>[a-zA-Z0-9_-]{11})},
+      %r{\A(?:https?://)?(?:www\.)?youtube\.com/embed/(?<id>[a-zA-Z0-9_-]{11})},
+      %r{\A(?:https?://)?(?:www\.)?youtube\.com/v/(?<id>[a-zA-Z0-9_-]{11})},
     ]
 
     # @return [Array<Regexp>] patterns matching URLs of YouTube channels.
     CHANNEL_PATTERNS = [
-      %r{^(?:https?://)?(?:www\.)?youtube\.com/channel/(?<id>UC[a-zA-Z0-9_-]{22})},
-      %r{^(?:https?://)?(?:www\.)?youtube\.com/(?<format>c/|user/)?(?<name>[a-zA-Z0-9_-]+)}
+      %r{\A(?:https?://)?(?:www\.)?youtube\.com/channel/(?<id>UC[a-zA-Z0-9_-]{22})},
+      %r{\A(?:https?://)?(?:www\.)?youtube\.com/(?<format>c/|user/)?(?<name>[a-zA-Z0-9_-]+)}
     ]
 
   private

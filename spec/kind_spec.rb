@@ -28,6 +28,11 @@ describe 'Yt::URL#kind' do
     it {expect(url.kind).to eq :unknown }
   end
 
+  context 'given a multi-line text containing a YouTube URL in the middle' do
+    let(:text) { "something-else\nyoutube.com/watch?v=gknzFj_0vvY" }
+    it {expect(url.kind).to eq :unknown }
+  end
+
   context 'given an unknown text' do
     let(:text) { 'not-really-anything---' }
     it {expect(url.kind).to eq :unknown }
