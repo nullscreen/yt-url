@@ -21,7 +21,7 @@ describe 'Yt::URL#resource', :server do
     let(:text) { "youtu.be/#{$unknown_video_id}" }
 
     it {expect(url.resource).to be_a Yt::Video }
-    it {expect{url.resource.title}.to raise_error Yt::NoItemsError }
+    it {expect{url.resource.title}.to raise_error Yt::Errors::NoItems }
   end
 
   context 'given an existing YouTube playlist URL' do
@@ -35,12 +35,12 @@ describe 'Yt::URL#resource', :server do
     let(:text) { "https://www.youtube.com/playlist?list=#{$unknown_playlist_id}" }
 
     it {expect(url.resource).to be_a Yt::Playlist }
-    it {expect{url.resource.title}.to raise_error Yt::NoItemsError }
+    it {expect{url.resource.title}.to raise_error Yt::Errors::NoItems }
   end
 
   context 'given an unknown text' do
     let(:text) { $unknown_text }
 
-    it {expect{url.resource}.to raise_error Yt::NoItemsError }
+    it {expect{url.resource}.to raise_error Yt::Errors::NoItems }
   end
 end

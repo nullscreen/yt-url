@@ -1,4 +1,4 @@
-require 'yt/core'
+require 'yt'
 
 # An object-oriented Ruby client for YouTube.
 # @see http://www.rubydoc.info/gems/yt/
@@ -35,7 +35,7 @@ module Yt
         when :channel then Yt::Channel
         when :video then Yt::Video
         when :playlist then Yt::Playlist
-        else raise Yt::NoItemsError
+        else raise Yt::Errors::NoItems
       end.new options.merge(id: id)
     end
 
@@ -94,7 +94,7 @@ module Yt
       if data = response.body.match(regex)
         data[:id]
       else
-        raise Yt::NoItemsError
+        raise Yt::Errors::NoItems
       end
     end
   end
